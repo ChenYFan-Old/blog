@@ -12,7 +12,6 @@ categories:
 abbrlink: b94b19d4
 date: 2020-04-02 12:54:00
 ---
-
 # :(
 
 Bilibili在2020/3/23公布要将av号全面换成BV号：[公告地址](https://www.bilibili.com/read/cv5167957)
@@ -46,7 +45,6 @@ BV：“BilibiliVideo”，感觉和油管接轨了一样，也是一堆看似�
 反人类设计：10位固定设计，字母数字混合，最难受的是还要**区分大小写**，这让线下传播视频就变得异常难受啊！！！
 
 区分大小写意味着如果你忘记按<kbd>CapsLock</kbd>打bv,那么你就会进入一个全新世界<img src="https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/moji/huaji.png">
-
 
 # 坏处
 
@@ -100,7 +98,6 @@ AV与BV其实是**互通的**,只是算法极其nb,base58(这辈子就听说过b
 
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-184.png)
 
-
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-185.png)
 
 注：BlueVideo是美国黄片的俚语
@@ -127,12 +124,9 @@ AV与BV其实是**互通的**,只是算法极其nb,base58(这辈子就听说过b
 
 目前我觉得可能性不大,一般性int值能达到2147483647,全中国一人发个视频也勉强装得下,而且最主要的AV号和BV号是互通的,以BV1874111715为例
 
-
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-168.png)
 
-
 换成av号av99307985
-
 
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-169.png)
 
@@ -184,16 +178,13 @@ AV与BV其实是**互通的**,只是算法极其nb,base58(这辈子就听说过b
 
 ChromeF12直接开挂开发者调试,选择 `Console` 控制台,输入aid
 
-
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-170.png)
 
 返回一串数字,就是av号
 
-
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-171.png)
 
 同理,对于AV视频,可以输入bvid获取那 ~~F\*\*king~~ BV
-
 
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-172.png)
 
@@ -314,10 +305,7 @@ UPD：之前的代码中，所有数位都被用到是乱凑的，实际上并�
 
 [Give me AV not BV](https://greasyfork.org/zh-CN/scripts/398526-give-me-av-not-bv)
 
-
-
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-186.png)
-
 
 ![upload successful](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/post/pasted-187.png)
 

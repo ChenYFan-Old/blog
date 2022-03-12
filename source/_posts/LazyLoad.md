@@ -13,7 +13,6 @@ copyright: true
 abbrlink: f47a8d59
 date: 2020-03-09 07:54:10
 ---
-
 说实话，很早以前接触懒加载是在看别人提到过，但当时对此不温不火的，因为当时部署在Coding上，速度基本加载图片几毫秒的事。而且当时每篇文章也就三四张图，基本不影响加载时间。
 
 可是现在部署在github上，国内一访问，终于明白LazyLoad的妙用了。
@@ -35,7 +34,6 @@ date: 2020-03-09 07:54:10
 最最致命的是,博客使用CloudFlareCDN,总会遭到XXX的恶意丢包:
 (测试环境为IPv6)
 
-```
 ping blog.cyfan.ga -t
 
 正在 Ping blog.cyfan.ga [2606:4700:3033::681c:10de] 具有 32 字节的数据:
@@ -59,12 +57,9 @@ ping blog.cyfan.ga -t
 来自 2606:4700:3033::681c:10de 的回复: 时间=291ms
 
 2606:4700:3033::681c:10de 的 Ping 统计信息:
-    数据包: 已发送 = 18，已接收 = 15，丢失 = 3 (16% 丢失)，
+数据包: 已发送 = 18，已接收 = 15，丢失 = 3 (16% 丢失)，
 往返行程的估计时间(以毫秒为单位):
-    最短 = 257ms，最长 = 462ms，平均 = 304ms
-Control-C
-^C
-```
+最短 = 257ms，最长 = 462ms，平均 = 304ms
 
 如果丢包丢的正好是图片,即使加载完毕,估计也是这么一个半死不活的图标:
 
@@ -108,17 +103,13 @@ Control-C
 
 ## html
 
-
-
 我们正常引用一张图片,格式应该如下:
-
 
 ```html
 <img src="/xxx.jpg" alt="图片" title="title">
 ```
 
 懒加载在html的图片语言中使用了回源, `data-original` 表示真正的图片位置,而 `src` 则是懒加载的外观图片.
-
 
 ```html
 <img src="https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/lazy.gif" data-original="/xxx.jpg" alt="图片" title="title">
@@ -134,7 +125,7 @@ Control-C
 
 这时候,建议使用 `Troy` 大佬开发的 `hexo-lazyload-image`
 
-### 安装`hexo-lazyload-image`:
+### 安装 `hexo-lazyload-image`:
 
 npm安装:
 
@@ -142,7 +133,7 @@ npm安装:
 npm install hexo-lazyload-image --save
 ```
 
-> 关于npm安装慢,请参考以前写的一篇[博文>>](/2019/07/19/国内加快NPM下载速度/)
+> 关于npm安装慢,请参考以前写的一篇[博文&gt;&gt;](/2019/07/19/国内加快NPM下载速度/)
 
 接着再hexo配置文件 `_config.yml `
 
@@ -159,8 +150,6 @@ lazyload:
 
 post一下,试试吧.
 
-
-
 ### 实现原理
 
 Hexo-lazy-image 实现原理
@@ -168,10 +157,10 @@ Hexo-lazy-image 实现原理
 
 最终可分为两步：
 
-在 `hexo after_post_render`事件或者`after_render:html`事件里将生产出来的文章html代码中所有img元素都加上 `data-original` 属性，并把 `src` 值付给他， 然后在将 `src` 值致为 `loading` 图片
+在 `hexo after_post_render`事件或者 `after_render:html`事件里将生产出来的文章html代码中所有img元素都加上 `data-original` 属性，并把 `src` 值付给他， 然后在将 `src` 值致为 `loading` 图片
 注入 `simple-lazyload` 脚本在每个页面最后面，当页面加载过后负责判定当前需要重新加载的图片。
 
-原大佬博客: [Troy's 博客](https://troyyang.com/2017/08/06/hexo-lazyload-image/)
+原大佬博客: [Troy&#39;s 博客](https://troyyang.com/2017/08/06/hexo-lazyload-image/)
 
 ## 意外发现
 
@@ -196,4 +185,3 @@ Hexo-lazy-image 实现原理
 这是我现在用的懒加载图片：
 
 ![LazyLoad](https://npm.elemecdn.com/chenyfan-oss@1.0.0/pic/lazy.gif)
-
